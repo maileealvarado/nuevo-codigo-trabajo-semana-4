@@ -1,0 +1,145 @@
+// Inicio
+//numeros identificadores de doctores son: 001, 002, 003
+
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.WriteLine("Bienvenido a tu clinica virtual, por favor ingresa tus datos");
+		
+		
+	//Tipos de datos
+	
+		
+	string usuario, contrasena;
+	int identificacion;
+	string sintomas = null;
+	string temperatura;
+	
+	
+	
+	Console.WriteLine("Ingresa tu nombre de usuario  ");
+	usuario = Console.ReadLine();
+		
+	Console.WriteLine("Ingresa tu contrasena  ");
+	contrasena = Console.ReadLine();
+		Console.Write("Has ingresado exitosamente! Por favor llena el formulario de cuadro clinico ");
+		
+	Console.Write("\n\n");	
+	Console.WriteLine("Ingresa tu nombre y apellido: ");
+	Console.Write("\n\n");
+	string nombre = Console.ReadLine();
+		
+	Console.WriteLine("Ingresa tu edad: ");
+	Console.Write("\n\n");
+    int edad = int.Parse(Console.ReadLine());
+		
+	Console.WriteLine("Mucho gusto " + nombre + " tu edad es " + edad + " anos ");
+	
+	Console.WriteLine("Ingresa tu genero: ");
+	Console.Write("\n\n");
+	string genero = (Console.ReadLine());
+		
+	Console.WriteLine("Ingresa tu numero de identificacion sin guiones  ");
+	Console.Write("\n\n");
+	identificacion = int.Parse(Console.ReadLine());
+	
+		
+	Console.WriteLine("Ingresa tus sintomas: ");
+	sintomas = Console.ReadLine();	
+		
+	
+//if else
+		
+	if (sintomas == "tos")
+	
+		
+		Console.WriteLine("Tienes fiebre? " );
+		
+	else 
+		
+		 Console.WriteLine("Deseas hablar con un especialista? ");
+		
+    if (Console.ReadLine() == "si" )
+        {
+            Console.WriteLine("Te tomaremos la temperatura ");
+		
+		 
+	    	Console.WriteLine("Tu temperatura es normal o muy alta?: ");
+		
+		    temperatura = Convert.ToString(Console.ReadLine());
+		
+	
+		Console.Write("\n\n");
+	    Console.WriteLine("Gracias por la informacion");
+	
+	
+        }
+    
+        {
+        Console.WriteLine("Te agendare una cita, estos son los dias disponibles ");
+		
+	    
+		
+		int i = 1;
+		int fecha;
+		
+		int [] fechas =  { 4, 8, 10, 16, 25, 30 };
+		for ( i = 0; i < fechas.GetLength(0); i++)
+			Console.WriteLine(fechas[i]);
+				Console.WriteLine(" Elige una fecha disponible   ");
+		        fecha = int.Parse(Console.ReadLine());
+		
+				int a = 1 ;
+	//numeros disponibles 001/002/003
+		Console.Write("Ingresa el numero identificador de tu doctor: ");
+		a = Convert.ToInt16(Console.ReadLine());
+	
+		 switch (a)
+		 {
+		
+				
+			case 001:
+				Console.WriteLine("Has elegido Dr. Marco Lopez");
+			    break;
+			case 002:
+				Console.WriteLine("Has elegido Dra. Maria Espinoza");
+			    break;
+			case 003:
+				Console.WriteLine("Has elegido Dra. Lucia Mendez");
+			    break;
+			default:
+				Console.WriteLine(" Este Doctor no esta disponible intentalo de nuevo ");
+			    break;
+		 }
+        }
+	    
+   
+		
+			Console.WriteLine("Nos ayudas a mejorar? Danos una puntuacion por nuestro servicio");
+		
+		int encuestas = 1;
+		int puntuacion;
+		do 
+		{
+		
+			Console.WriteLine(encuestas);
+			encuestas++;
+			
+		} while (encuestas <= 5);
+		
+		puntuacion = int.Parse(Console.ReadLine());
+			
+		
+		
+	Console.Write("\n\n");
+	Console.WriteLine("Gracias por elegir nuestra clinica virtual te estaremos recordando sobre tu cita dos dias antes de esta misma. ");
+		
+
+	
+    }
+	
+}
+//Fin
