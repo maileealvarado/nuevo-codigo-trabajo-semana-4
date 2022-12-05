@@ -1,0 +1,84 @@
+Algoritmo  clinica_virtual
+	Escribir "Bienvenido a tu clinica virtual, por favor ingresa tus datos"
+	
+	Escribir "Ingresa tu nombre de usuario  "
+	
+	leer usuario
+	
+	Escribir "Ingresa tu contrasena  "
+	
+	Leer constrasena
+	
+	Escribir "Has ingresado exitosamente! Por favor llena el formulario de cuadro clinico "
+	
+	Escribir "Ingresa tu nombre y apellido: "
+	
+	Leer nombre
+	
+	Escribir "Ingresa tu edad: "
+	
+	Leer edad
+	
+	Escribir "Mucho gusto " + nombre + " tu edad es " + edad + " anos "
+	
+	Escribir "Ingresa tu genero: "
+	
+	Leer genero
+	
+	Escribir "Ingresa tu numero de identificacion sin guiones  "
+	
+	Leer identificacion
+	
+	Escribir "Ingresa tus sintomas: "
+	
+    Si sintomas = "tos" 
+		
+        Escribir "Tienes fiebre? " 
+	SiNo
+		Escribir "Deseas hablar con un especialista? "
+		Si respuesta ="si"
+			Escribir "Te tomaremos la temperatura "
+			Escribir "Tu temperatura es normal o muy alta?: "
+			Leer temperatura 
+		FinSi
+	FinSI
+	
+	
+	Escribir "Gracias por la informacion"
+		
+	Escribir "Te agendare una cita, estos son los dias disponibles "
+	
+	Escribir " Elige una fecha disponible   "
+	Leer fecha
+	
+	Escribir "Ingresa el numero identificador de tu doctor: "
+	leer a 
+	
+	Segun a Hacer
+		1:
+			Escribir "Has elegido Dr. Marco Lopez"
+		2:
+			Escribir "Has elegido Dra. Maria Espinoza"
+		3:
+			Escribir "Has elegido Dra. Lucia Mendez"
+		De Otro Modo:
+			Escribir " Este Doctor no esta disponible intentalo de nuevo "
+			
+	FinSegun
+	
+	Escribir "Nos ayudas a mejorar? Danos una puntuacion por nuestro servicio"
+	
+	
+	Mientras (encuestas <= 5) Hacer
+		leer encuestas 
+		
+	FinMientras
+	
+	Escribir "Gracias por elegir nuestra clinica virtual te estaremos recordando sobre tu cita dos dias antes de esta misma. "
+	
+	
+	
+	
+	
+	
+FinAlgoritmo
